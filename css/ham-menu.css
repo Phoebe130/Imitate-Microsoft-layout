@@ -1,0 +1,105 @@
+/* 漢堡條下拉選單 */
+.ham-inside-menu{
+    width: 100%;
+    clear: both;
+    list-style: none;
+    transition: all 0.5s linear;
+    overflow: hidden;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    border-bottom: 1px solid black;
+    border-left: 1px solid #E6E6E6;
+    border-top: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+    padding-left:0px;
+    z-index: 1000;
+}
+
+
+#ham-menu-switch:checked ~ .ham-inside-menu{
+    display: block;
+}
+
+
+.sub-drop-menu-btn{
+    height: 100%;
+    width: 100%;
+}
+.ham-inside-menu li{
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #E6E6E6;
+    display: flex;
+    justify-content: flex-start;
+    padding: 14px 20px 15px 20px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+.outside-sub-drop-menu {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.outside-sub-drop-menu div{
+    background-image: url(../img/down-icon.svg);
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+
+}
+
+.ham-inside-menu a{  
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 15px;
+}
+
+.ham-inside-menu span{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 15px;
+}
+
+.sub-drop-menu{
+    display: none;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    width: 100%;
+}
+
+.sub-drop-menu>li{
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: flex-start;
+    padding: 14px 24px 15px 10px;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+.sub-drop-menu>li:nth-last-of-type(1){
+    padding: 14px 24px 15px 35px;
+    margin-left: 0;
+}
+
+
+.all-sub-drop-btn:nth-of-type(n):checked + label div{
+    background-image: url(../img/up-icon-01.svg);
+}
+
+.all-sub-drop-btn:nth-of-type(n):checked + label +.sub-drop-menu{
+    display: flex;
+}
+
+.ham-inside-menu li:focus{
+    border: 1px dashed black;
+}
